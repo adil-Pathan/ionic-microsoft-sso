@@ -1,0 +1,37 @@
+# dependencies
+node_modules/
+npm-debug.log
+yarn-error.log
+
+# environment
+.env
+.env.local
+.env.*.local
+
+# build outputs
+dist/
+build/
+www/
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*.swn
+*.sublime-project
+*.sublime-workspace
+.DS_Store
+
+# Capacitor
+android/
+ios/
+
+# Angular
+angular/dist/
+.angular/
+
+# Node
+node_modules/
+package-lock.json
+yarn.lock

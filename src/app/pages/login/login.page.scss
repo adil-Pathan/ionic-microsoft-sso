@@ -1,0 +1,30 @@
+.login-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  padding: 20px;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+}
+
+.welcome-card {
+  width: 100%;
+  max-width: 400px;
+  margin-bottom: 40px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+}
+
+.login-button-container {
+  width: 100%;
+  max-width: 400px;
+}
+
+.microsoft-button {
+  --background: #0078d4;
+  --background-hover: #106ebe;
+  --color: white;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  box-shadow: 0 4px 8px rgba(0, 120, 212, 0.3);
+}

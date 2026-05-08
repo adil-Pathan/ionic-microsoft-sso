@@ -1,0 +1,38 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Microsoft SSO Login</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="ion-padding">
+  <div class="login-container">
+    <ion-card class="welcome-card">
+      <ion-card-header>
+        <ion-card-title>Welcome</ion-card-title>
+      </ion-card-header>
+      <ion-card-content>
+        <p class="ion-text-center">Sign in with your Microsoft account</p>
+      </ion-card-content>
+    </ion-card>
+
+    <div class="login-button-container">
+      <ion-button
+        expand="block"
+        size="large"
+        (click)="loginWithMicrosoft()"
+        [disabled]="isLoading"
+        class="microsoft-button">
+        <ion-icon slot="start" name="logo-microsoft"></ion-icon>
+        {{ isLoading ? 'Signing in...' : 'Sign in with Microsoft' }}
+      </ion-button>
+    </div>
+
+    <ion-alert
+      *ngIf="error"
+      [isOpen]="!!error"
+      message="{{ error }}"
+      [buttons]="['OK']"
+      (didDismiss)="error = null">
+    </ion-alert>
+  </div>
+</ion-content>

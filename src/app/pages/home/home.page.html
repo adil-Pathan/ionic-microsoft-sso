@@ -1,0 +1,36 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Home</ion-title>
+    <ion-buttons slot="end">
+      <ion-button (click)="logout()" [disabled]="isLoading">
+        <ion-icon slot="icon-only" name="log-out"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="ion-padding">
+  <ion-card *ngIf="userProfile$ | async as profile">
+    <ion-card-header>
+      <ion-card-title>User Profile</ion-card-title>
+    </ion-card-header>
+    <ion-card-content>
+      <ion-item>
+        <ion-label>Name:</ion-label>
+        <ion-text>{{ profile.displayName }}</ion-text>
+      </ion-item>
+      <ion-item>
+        <ion-label>Email:</ion-label>
+        <ion-text>{{ profile.mail }}</ion-text>
+      </ion-item>
+      <ion-item *ngIf="profile.jobTitle">
+        <ion-label>Job Title:</ion-label>
+        <ion-text>{{ profile.jobTitle }}</ion-text>
+      </ion-item>
+      <ion-item *ngIf="profile.mobilePhone">
+        <ion-label>Phone:</ion-label>
+        <ion-text>{{ profile.mobilePhone }}</ion-text>
+      </ion-item>
+    </ion-card-content>
+  </ion-card>
+</ion-content>
